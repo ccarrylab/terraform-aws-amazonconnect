@@ -32,8 +32,8 @@ locals {
         {
           sales_queue_arn   = try(module.amazon_connect.queues["sales"].arn, "")
           support_queue_arn = try(module.amazon_connect.queues["support"].arn, "")
-          lambda_arn        = aws_lambda_function.example1.arn
-          lex_bot_name      = aws_lex_bot.example1.name
+          lambda_arn        = aws_lambda_function.example.arn
+          lex_bot_name      = aws_lex_bot.example.name
         }
       )
     }
