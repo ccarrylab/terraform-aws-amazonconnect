@@ -8,13 +8,5 @@ locals {
       hours_of_operation_id = try(module.amazon_connect.hours_of_operations["support"].hours_of_operation_id, null)
       max_contacts          = 9
     }
-    gtssales = {
-      hours_of_operation_id = try(module.amazon_connect.hours_of_operations["gtssales"].hours_of_operation_id, null)
-      max_contacts          = 5
-    }
-    ceosales = {
-      hours_of_operation_id = try(module.amazon_connect.hours_of_operations["ceosales"].hours_of_operation_id, null)
-      max_contacts          = 5
-    }
   }
 }
