@@ -23,6 +23,7 @@ resource "aws_connect_instance" "this" {
   directory_id                     = var.instance_directory_id
   early_media_enabled              = var.instance_early_media_enabled
   instance_alias                   = var.instance_alias
+  instance_id                      = aws_connect_instance.instance.id
 
   lifecycle {
     precondition {
