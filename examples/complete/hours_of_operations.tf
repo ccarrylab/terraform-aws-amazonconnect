@@ -22,12 +22,47 @@ locals {
         }
       ]
     }
+    hours_of_operations = {
+    ceosales = {
+      description = "HOOP for CEOSales"
+      time_zone   = local.time_zone
+      config = [
+        for w in local.ceosales_weekdays : {
+          day = w
+          start_time = {
+            hours   = 8 # 8 AM
+            minutes = 0
+          }
+          end_time = {
+            hours   = 18 # 6 PM
+            minutes = 0
+          }
+        }
+      ]
+    
     support = {
       description = "HOOP for Support"
       time_zone   = local.time_zone
       config = flatten([
         [
           for w in local.support_weekdays : {
+            day = w
+            start_time = {
+              hours   = 8 # 8 AM
+              minutes = 0
+            }
+            end_time = {
+              hours   = 18 # 6 PM
+              minutes = 0
+            }
+          }
+        ]
+      ceosupport = {
+      description = "HOOP for ceoSupport"
+      time_zone   = local.time_zone
+      config = flatten([
+        [
+          for w in local.ceosupport_weekdays : {
             day = w
             start_time = {
               hours   = 8 # 8 AM
