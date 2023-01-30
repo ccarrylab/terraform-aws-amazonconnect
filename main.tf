@@ -22,7 +22,7 @@ resource "aws_connect_instance" "this" {
   contact_lens_enabled             = var.instance_contact_lens_enabled
   directory_id                     = var.instance_directory_id
   early_media_enabled              = var.instance_early_media_enabled
-  instance_alias                   = var.instance_alias
+  instance_alias                   = "gts-contact-center"
 
   lifecycle {
     precondition {
