@@ -7,6 +7,17 @@ locals {
     support = {
       hours_of_operation_id = try(module.amazon_connect.hours_of_operations["support"].hours_of_operation_id, null)
       max_contacts          = 9
+
+    }
+    supportteam = {
+      hours_of_operation_id = try(module.amazon_connect.hours_of_operations["supporteam"].hours_of_operation_id, null)
+      max_contacts          = 9
+
+    }
+    ceosupport = {
+      hours_of_operation_id = try(module.amazon_connect.hours_of_operations["ceosupport"].hours_of_operation_id, null)
+      max_contacts          = 9
+
     }
   }
 }

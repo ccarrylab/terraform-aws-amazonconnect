@@ -30,10 +30,12 @@ locals {
       content = templatefile(
         "${path.module}/contact-flows/GTS-Get-Customer-Profile-Information.json.tftpl",
         {
-          sales_queue_arn   = try(module.amazon_connect.queues["sales"].arn, "")
-          support_queue_arn = try(module.amazon_connect.queues["support"].arn, "")
-          lambda_arn        = aws_lambda_function.example.arn
-          lex_bot_name      = aws_lex_bot.example.name
+          sales_queue_arn      = try(module.amazon_connect.queues["sales"].arn, "")
+          support_queue_arn    = try(module.amazon_connect.queues["support"].arn, "")
+          ceosales_queue_arn   = try(module.amazon_connect.queues["ceosales"].arn, "")
+          ceosupport_queue_arn = try(module.amazon_connect.queues["ceosupport"].arn, "")
+          lambda_arn           = aws_lambda_function.example.arn
+          lex_bot_name         = aws_lex_bot.example.name
         }
       )
     }
