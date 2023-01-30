@@ -39,7 +39,7 @@ locals {
           }
         }
       ]
-    
+    hours_of_operations = {
     support = {
       description = "HOOP for Support"
       time_zone   = local.time_zone
@@ -57,6 +57,7 @@ locals {
             }
           }
         ]
+        hours_of_operations = {
       ceosupport = {
       description = "HOOP for ceoSupport"
       time_zone   = local.time_zone
