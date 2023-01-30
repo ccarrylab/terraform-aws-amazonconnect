@@ -26,7 +26,7 @@ locals {
 resource "aws_connect_contact_flow_module" "gts" {
   instance_id = "a7952ceb-7e2a-4b8a-bc36-ae21e64d65e9"
   name        = "GTS Example"
-  description = "Example Contact Flow Module Description"
+  description = "GTS Contact Flow Module Description"
 
   content = <<JSON
     {
@@ -1640,7 +1640,7 @@ resource "aws_connect_contact_flow_module" "gts" {
 
   tags = {
     "Name"        = "Example Contact Flow Module",
-    "Application" = "Terraform",
+    "Application" = "GTS Contact Center",
     "Method"      = "Create"
   }
 }
