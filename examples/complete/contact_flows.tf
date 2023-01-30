@@ -26,7 +26,7 @@ locals {
 resource "aws_connect_contact_flow" "contact_flow" {
   name        = "my-contact-flow"
   type        = "CUSTOM"
-  instance_id = aws_connect_instance.instance.id
+  instance_id = "gts-contact-center"
 
   content = <<JSON
     {
