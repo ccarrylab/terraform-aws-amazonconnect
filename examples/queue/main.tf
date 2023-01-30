@@ -14,7 +14,7 @@ module "amazon_connect" {
   instance_identity_management_type = "CONNECT_MANAGED"
   instance_inbound_calls_enabled    = true
   instance_outbound_calls_enabled   = true
-  instance_alias                    = random_string.instance_alias.result
+  instance_alias                    = aws_connect_instance.instance.id
 
   # Queues
   queues = {

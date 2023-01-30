@@ -7,7 +7,7 @@ locals {
       security_profile_ids = try([module.amazon_connect.security_profiles["example"].security_profile_id], [])
 
       identity_info = {
-        email      = "sales@example.com"
+        email      = "sales@globo-tek.com"
         first_name = "Sales"
         last_name  = "Agent"
       }
