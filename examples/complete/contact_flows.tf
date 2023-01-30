@@ -23,60 +23,6 @@ locals {
   }
 }
 
-resource "aws_connect_contact_flow_module" "gts" {
-  instance_id = "a7952ceb-7e2a-4b8a-bc36-ae21e64d65e9"
-  name        = "GTS Example"
-  description = "GTS Contact Flow Module Description"
-
-  content = <<JSON
-    {
-        "Version": "2019-10-30",
-        "StartAction": "12345678-1234-1234-1234-123456789012",
-        "Actions": [
-            {
-                "Identifier": "12345678-1234-1234-1234-123456789012",
-                "Parameters": {
-                    "Text": "Hello contact flow module"
-                },
-                "Transitions": {
-                    "NextAction": "abcdef-abcd-abcd-abcd-abcdefghijkl",
-                    "Errors": [],
-                    "Conditions": []
-                },
-                "Type": "MessageParticipant"
-            },
-            {
-                "Identifier": "abcdef-abcd-abcd-abcd-abcdefghijkl",
-                "Type": "DisconnectParticipant",
-                "Parameters": {},
-                "Transitions": {}
-            }
-        ],
-        "Settings": {
-            "InputParameters": [],
-            "OutputParameters": [],
-            "Transitions": [
-                {
-                    "DisplayName": "Success",
-                    "ReferenceName": "Success",
-                    "Description": ""
-                },
-                {
-                    "DisplayName": "Error",
-                    "ReferenceName": "Error",
-                    "Description": ""
-                }
-            ]
-        }
-    }
-    JSON
-
-  tags = {
-    "Name"        = "Example Contact Flow Module",
-    "Application" = "Terraform",
-    "Method"      = "Create"
-  }
-}
 
 resource "aws_connect_contact_flow_module" "example" {
   instance_id  = "a7952ceb-7e2a-4b8a-bc36-ae21e64d65e9"
@@ -85,9 +31,8 @@ resource "aws_connect_contact_flow_module" "example" {
   filename     = "contact_flow_module.json"
   content_hash = filebase64sha256("contact_flow_module.json")
 
-  tags = {
-    "Name"        = "Example Contact Flow Module",
-    "Application" = "Terraform",
-    "Method"      = "Create"
-  }
 }
+
+
+
+
