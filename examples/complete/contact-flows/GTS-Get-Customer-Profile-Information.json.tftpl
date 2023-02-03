@@ -86,7 +86,7 @@
                 ],
                 "TimeZone": "US/Eastern",
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_Hours_Of_Operation"
             }
@@ -103,7 +103,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_Callback"
             }
@@ -120,7 +120,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_Main_Flow"
             }
@@ -132,7 +132,7 @@
                     "Ref": "ConnectInstanceID"
                 },
                 "FunctionArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:Sample_SendSMS"
+                    "Fn::Sub": "arn:$${AWS::Partition}:lambda:$${AWS::Region}:$${AWS::AccountId}:function:Sample_SendSMS"
                 },
                 "ServiceToken": {
                     "Fn::ImportValue": "CFNConnectAssociateLambda"
@@ -146,7 +146,7 @@
                     "Ref": "ConnectInstanceID"
                 },
                 "AliasArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:lex:${AWS::Region}:${AWS::AccountId}:bot-alias/RV05CVNUFP/GR8LWG3KQS"
+                    "Fn::Sub": "arn:$${AWS::Partition}:lex:$${AWS::Region}:$${AWS::AccountId}:bot-alias/RV05CVNUFP/GR8LWG3KQS"
                 },
                 "ServiceToken": {
                     "Fn::ImportValue": "CFNConnectAssociateLexV2Bot"
@@ -164,7 +164,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_Error"
             }
@@ -180,7 +180,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_GetPhoneNumber"
             }
@@ -192,7 +192,7 @@
                     "Ref": "ConnectInstanceID"
                 },
                 "AliasArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:lex:${AWS::Region}:${AWS::AccountId}:bot-alias/4DNUYZJB6T/Y3T4EINALP"
+                    "Fn::Sub": "arn:$${AWS::Partition}:lex:$${AWS::Region}:$${AWS::AccountId}:bot-alias/4DNUYZJB6T/Y3T4EINALP"
                 },
                 "ServiceToken": {
                     "Fn::ImportValue": "CFNConnectAssociateLexV2Bot"
@@ -210,7 +210,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_GetService"
             }
@@ -222,7 +222,7 @@
                     "Ref": "ConnectInstanceID"
                 },
                 "AliasArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:lex:${AWS::Region}:${AWS::AccountId}:bot-alias/ET58BHKVXE/KSPQHW9OPV"
+                    "Fn::Sub": "arn:$${AWS::Partition}:lex:$${AWS::Region}:$${AWS::AccountId}:bot-alias/ET58BHKVXE/KSPQHW9OPV"
                 },
                 "ServiceToken": {
                     "Fn::ImportValue": "CFNConnectAssociateLexV2Bot"
@@ -240,7 +240,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
                 },
                 "Name": "Sample_Initialize"
             }
@@ -252,7 +252,7 @@
                     "Ref": "ConnectInstanceID"
                 },
                 "FunctionArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:getPrompt"
+                    "Fn::Sub": "arn:$${AWS::Partition}:lambda:$${AWS::Region}:$${AWS::AccountId}:function:getPrompt"
                 },
                 "ServiceToken": {
                     "Fn::ImportValue": "CFNConnectAssociateLambda"
@@ -270,7 +270,7 @@
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_TransferToAgent"
             }
