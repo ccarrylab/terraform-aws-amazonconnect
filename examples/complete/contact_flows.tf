@@ -317,7 +317,7 @@ resource "aws_connect_contact_flow" "test" {
 }
     JSON
   tags = {
-    "Name"        = "Test Contact Flow",
+    "Name"        = "Test Contact GTS Flow",
     "Application" = "Terraform",
     "Method"      = "Create"
   }
