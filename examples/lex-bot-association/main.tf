@@ -19,20 +19,20 @@ module "amazon_connect" {
   # Lex Bot Associations
   bot_associations = {
     example = {
-      name = aws_lex_bot.example.name
+      name = aws_lex_bot.client.name
     }
   }
 }
 
 # Lex Bot
-resource "aws_lex_bot" "example" {
-  name             = "example"
+resource "aws_lex_bot" "client" {
+  name             = "client"
   child_directed   = false
   process_behavior = "BUILD"
 
   intent {
-    intent_name    = aws_lex_intent.example.name
-    intent_version = aws_lex_intent.example.version
+    intent_name    = aws_lex_intent.client.name
+    intent_version = aws_lex_intent.client.version
   }
 
   abort_statement {
@@ -52,15 +52,15 @@ resource "aws_lex_bot" "example" {
   }
 }
 
-resource "aws_lex_intent" "example" {
-  name = "example"
+resource "aws_lex_intent" "client" {
+  name = "client"
 
   fulfillment_activity {
     type = "ReturnIntent"
   }
 
   sample_utterances = [
-    "example one",
-    "example two"
+    "client one",
+    "client two"
   ]
 }
