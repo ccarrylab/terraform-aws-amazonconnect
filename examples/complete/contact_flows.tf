@@ -118,7 +118,7 @@ resource "aws_connect_contact_flow_module" "gts" {
                 ],
                 "TimeZone": "US/Eastern",
                 "InstanceArn": {
-                    "Fn::Sub": "arn:${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:${AWS::Region}:${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_Hours_Of_Operation"
             }
