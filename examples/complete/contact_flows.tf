@@ -23,7 +23,7 @@ locals {
   }
 }
 
-resource "aws_connect_contact_flow" "test" {
+resource "aws_connect_contact_flow" "inbound" {
   instance_id = "a7952ceb-7e2a-4b8a-bc36-ae21e64d65e9"
   name        = "Test"
   description = "Test Contact Flow Description"
