@@ -117,7 +117,7 @@ resource "aws_connect_contact_flow" "test" {
                 ],
                 "TimeZone": "US/Eastern",
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_Hours_Of_Operation"
             }
@@ -134,7 +134,7 @@ resource "aws_connect_contact_flow" "test" {
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_Callback"
             }
@@ -151,7 +151,7 @@ resource "aws_connect_contact_flow" "test" {
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_Main_Flow"
             }
@@ -195,7 +195,7 @@ resource "aws_connect_contact_flow" "test" {
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_Error"
             }
@@ -211,7 +211,7 @@ resource "aws_connect_contact_flow" "test" {
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_GetPhoneNumber"
             }
@@ -241,7 +241,7 @@ resource "aws_connect_contact_flow" "test" {
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_GetService"
             }
@@ -271,7 +271,7 @@ resource "aws_connect_contact_flow" "test" {
                     ]
                 },
                 "InstanceArn": {
-                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/$${ConnectInstanceID}"
+                    "Fn::Sub": "arn:$${AWS::Partition}:connect:$${AWS::Region}:$${AWS::AccountId}:instance/${ConnectInstanceID}"
                 },
                 "Name": "Sample_Initialize"
             }
