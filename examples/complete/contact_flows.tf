@@ -323,9 +323,9 @@ resource "aws_connect_contact_flow" "test" {
   }
 }
 
-resource "aws_connect_contact_flow" "test" {
+resource "aws_connect_contact_flow" "test101" {
   instance_id  = "a7952ceb-7e2a-4b8a-bc36-ae21e64d65e9"
-  name         = "Test"
+  name         = "Test101"
   description  = "Test Contact Flow Description"
   type         = "CONTACT_FLOW"
   filename     = "contact_flow.json"
