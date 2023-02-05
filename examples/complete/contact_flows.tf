@@ -24,7 +24,7 @@ locals {
 }
 
 resource "aws_connect_contact_flow" "test" {
-  instance_id = "aaaaaaaa-bbbb-cccc-dddd-111111111111"
+  instance_id = "1d16785f-f40f-4f18-b481-8926f1cb4358"
   name        = "test101"
   description = "Test Contact Flow Description"
   type        = "CONTACT_FLOW"
