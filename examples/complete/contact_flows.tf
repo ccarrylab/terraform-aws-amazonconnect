@@ -28,7 +28,7 @@ resource "aws_connect_contact_flow" "test" {
   name        = "test"
   description = "Test Contact Flow Description"
   type        = "CONTACT_FLOW"
-  content     = <<JSON
+  content     = <<EOT
     {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Connect Contact Flows",
@@ -315,7 +315,7 @@ resource "aws_connect_contact_flow" "test" {
         }
     }
 }
-    JSON
+    EOT
   tags = {
     "Name"        = "Test Contact GTSFlow",
     "Application" = "Terraform",
