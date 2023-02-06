@@ -322,3 +322,4 @@ resource "aws_connect_contact_flow" "test" {
     "Method"      = "Create"
   }
 }
+
